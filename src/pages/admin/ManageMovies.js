@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import Movies from '../Movies';
+import MovieList from '../../components/MovieList';
+import {Link} from "react-router-dom";
+
 
 function ManageMovies() {
     const [movies, setMovies] = useState([]);
@@ -21,11 +23,24 @@ function ManageMovies() {
             console.log(error);
         }
     }
+
+    const deleteMovie = async (movieID) => {
+        try {
+            await fetch('http://localhost:5000/movies/' + movieID, {
+                method: 'DELETE', // GET, POST, PATCH, DELETE
+            });
+        } catch (message) {
+            throw new Error(message);
+        }
+
+        fetchMovies();
+    }
     
     return (
         <div>
             <h1>Manage Movies</h1>
-            <Movies movies={movies} />
+            <Link to="/create-movie">Create movie</Link>
+            <MovieList movies={movies} deleteMovie={deleteMovie} />
         </div>
     )
 }

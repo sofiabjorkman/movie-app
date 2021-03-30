@@ -19,8 +19,8 @@ function App() {
           <Switch>
             <Route path="/" exact component={Movies} />
             <Route path="/admin" component={ManageMovies} />
-            <Route path="/create-movie" exact component={CreateMovie} />
-            <Route path="/admin/update-movies/:id" component={UpdateMovies} />
+            <Route path="/create-movie" component={CreateMovie} />
+            <Route path="/update-movies/:id" component={UpdateMovies} />
           </Switch>
       </div>
     </Router>

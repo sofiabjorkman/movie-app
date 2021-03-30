@@ -1,17 +1,11 @@
 import React from 'react'
-import Movie from '../pages/Movie'
+import MovieList from '../components/MovieList'
 
-function Movies({movies}) {
+function Movies() {
     return (
         <div>
-            
-            <h1>Movies</h1>
             <ul>
-                {
-                    movies.map( movie => (
-                        <Movie key={movie['_id']} movie={movie} />
-                    ))
-                }
+                <MovieList />
             </ul>
         </div>
     )
