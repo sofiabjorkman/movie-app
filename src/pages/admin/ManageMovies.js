@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import MovieList from '../../components/MovieList';
 import {Link} from "react-router-dom";
+import MovieList from '../../components/MovieList';
+// import Home from '../Home';
 
 
 function ManageMovies() {
@@ -41,6 +42,7 @@ function ManageMovies() {
             <h1>Manage Movies</h1>
             <Link to="/create-movie">Create movie</Link>
             <MovieList movies={movies} deleteMovie={deleteMovie} />
+            
         </div>
     )
 }

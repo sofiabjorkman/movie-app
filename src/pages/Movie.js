@@ -6,8 +6,6 @@ function Movie({movie, deleteMovie}) {
         deleteMovie(movie['_id']);
     }
 
-
-
     return (
         <div>
             <li>

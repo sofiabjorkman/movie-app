@@ -2,7 +2,7 @@ import './App.css';
 import ManageMovies from './pages/admin/ManageMovies';
 import CreateMovie from './pages/admin/CreateMovie';
 import UpdateMovies from './pages/admin/UpdateMovies';
-import Movies from './pages/Movies';
+import Home from './pages/Home';
 import Nav from './components/Nav';
 
 import {
@@ -17,7 +17,7 @@ function App() {
       <div className="App">
         <Nav />
           <Switch>
-            <Route path="/" exact component={Movies} />
+            <Route path="/" exact component={Home} />
             <Route path="/admin" component={ManageMovies} />
             <Route path="/create-movie" component={CreateMovie} />
             <Route path="/update-movies/:id" component={UpdateMovies} />
